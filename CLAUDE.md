@@ -11,7 +11,7 @@ projeto é `documento.md` (índice) e `docs/`.
 - `prd-start.md` — PRD com as 4 etapas (fonte do escopo).
 
 ## Estrutura
-- `app/` — frontend React/Vite (Etapa 2). Referência: `site_midia5d`.
+- `app/` — frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
 - `server/` — backend: IA de conversação / bot Guto (LLM) + Supabase (Etapa 3).
 - `docs/` — documentação do arquétipo ProjetoProduto (`00_..12_`, `specs/`).
 - `Hooks/`, `scripts/`, `Conversa_Agentes/` — infra de agentes (hooks, barramento).

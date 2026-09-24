@@ -4,7 +4,7 @@ Ponto de entrada do projeto **Site Papagaios Solutions**. Base arquitetural: **P
 (arquétipo `ProjetoProduto`) + casas de código `app/` e `server/`.
 
 ## Raiz
-- `app/` — Frontend React/Vite (Etapa 2). Referência: `site_midia5d`.
+- `app/` — Frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
 - `server/` — Backend: IA de conversação / bot Guto + Supabase (Etapa 3).
 - `docs/` — Documentação do arquétipo (ver abaixo).
 - `Hooks/`, `scripts/`, `Conversa_Agentes/` — infra de agentes (hooks, barramento).

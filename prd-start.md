@@ -15,7 +15,7 @@ Você será responsável por criar o site da **Papagaios Solutions**. Execute o 
 
 Estrutura do projeto (raiz limpa):
 
-- `app/` — frontend **React/Vite** (Etapa 2), referência `site_midia5d`.
+- `app/` — frontend **React (Next.js)** (Etapa 2), referência `site_midia5d`.
 - `server/` — backend de **IA de conversação / bot Guto** (LLM) + Supabase (Etapa 3).
 - `docs/` — documentação do arquétipo ProjetoProduto (`00_..12_`, `specs/`), um `documento.md` por pasta.
 - Infra de agentes: `Hooks/` (anti-segredo + nudges), `scripts/` (barramento `bus.ps1`,

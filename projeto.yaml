@@ -9,7 +9,7 @@ versao: 0.1.0
 
 # Estrutura
 codigo:
-  frontend: app/        # React/Vite (Etapa 2) - referencia: site_midia5d
+  frontend: app/        # React (Next.js) (Etapa 2) - referencia: site_midia5d
   backend: server/      # IA de conversacao / bot Guto + Supabase (Etapa 3)
 docs: docs/             # arquetipo ProjetoProduto (00_..12_, specs)
 infra_agentes:
