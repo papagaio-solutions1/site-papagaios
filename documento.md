@@ -1,11 +1,11 @@
 # Documento — Índice navegável do site-papagaios
 
 Ponto de entrada do projeto **Site Papagaios Solutions**. Base arquitetural: **Processo-Padrão**
-(arquétipo `ProjetoProduto`) + casas de código `app/` e `server/`.
+(arquétipo `ProjetoProduto`) + casas de código `frontend/` e `backend/`.
 
 ## Raiz
-- `app/` — Frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
-- `server/` — Backend: IA de conversação / bot Guto + Supabase (Etapa 3).
+- `frontend/` — Frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
+- `backend/` — Backend: IA de conversação / bot Guto + Supabase (Etapa 3).
 - `docs/` — Documentação do arquétipo (ver abaixo).
 - `Hooks/`, `scripts/`, `Conversa_Agentes/` — infra de agentes (hooks, barramento).
 - `.claude/`, `.agents/`, `.codex/` — config dos agentes; `CLAUDE.md` / `AGENTS.md` — adaptadores.

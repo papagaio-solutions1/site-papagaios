@@ -10,8 +10,8 @@ O motor do `PAPAGAIO-NUCLEO` foi descartado nesta fundação (scaffolder quebrad
 ### Raiz
 | Pasta | O quê |
 |---|---|
-| `app/` | Frontend **React (Next.js)** (Etapa 2), mesma stack da referência `site_midia5d` (Next 16 + Tailwind 4 + shadcn/ui + motion). Identidade 100% Papagaios Solutions. Mantém o bot Guto. |
-| `server/` | Backend (Etapa 3): **IA de conversação / bot Guto** (LLM), regras de negócio, APIs e integração **Supabase**. |
+| `frontend/` | Frontend **React (Next.js)** (Etapa 2), mesma stack da referência `site_midia5d` (Next 16 + Tailwind 4 + shadcn/ui + motion). Identidade 100% Papagaios Solutions. Mantém o bot Guto. |
+| `backend/` | Backend (Etapa 3): **IA de conversação / bot Guto** (LLM), regras de negócio, APIs e integração **Supabase**. |
 | `docs/` | Documentação do arquétipo **ProjetoProduto** (`00_..12_`, `specs/`). |
 | `Hooks/`, `scripts/`, `Conversa_Agentes/` | Infra de agentes: hooks, barramento. |
 | `.claude/`, `.agents/`, `.codex/` | Config operacional dos agentes (Claude/Codex). |

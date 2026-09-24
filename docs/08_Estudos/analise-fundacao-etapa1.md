@@ -29,7 +29,7 @@ Um site de marketing em React + bot Guto (LLM) + Supabase não mapeia em nenhuma
 
 ## Decisão (aprovada pelo dono)
 Base = **convenções do Processo-Padrão** + arquétipo **ProjetoProduto (enxuto)** + casas de código
-`app/` (frontend React) e `server/` (backend IA de conversação / bot Guto + Supabase).
+`frontend/` (frontend React) e `backend/` (backend IA de conversação / bot Guto + Supabase).
 
 Motivos: o scaffolder do Processo-Padrão (`propagar_estrutura.ps1`) **funciona**, é **idempotente e
 não-destrutivo** (não apaga `.env`/`visual/`), e o repositório traz `skill-library` com

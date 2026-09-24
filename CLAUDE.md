@@ -5,14 +5,15 @@ Adaptador curto deste projeto. As regras de estilo/processo herdam as **convenç
 projeto é `documento.md` (índice) e `docs/`.
 
 ## Abrir primeiro
+- `handover.md` — onde parei e por onde retomar (LER PRIMEIRO no início da sessão).
 - `documento.md` — índice navegável do projeto.
 - `docs/00_Indice_Mestre/` — mapa/ponto de entrada da documentação.
 - A spec da feature em `docs/specs/` (ou `docs/00_Specs_SDD/`) antes de mexer em implementação.
 - `prd-start.md` — PRD com as 4 etapas (fonte do escopo).
 
 ## Estrutura
-- `app/` — frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
-- `server/` — backend: IA de conversação / bot Guto (LLM) + Supabase (Etapa 3).
+- `frontend/` — frontend React (Next.js) (Etapa 2). Referência: `site_midia5d`.
+- `backend/` — backend: IA de conversação / bot Guto (LLM) + Supabase (Etapa 3).
 - `docs/` — documentação do arquétipo ProjetoProduto (`00_..12_`, `specs/`).
 - `Hooks/`, `scripts/`, `Conversa_Agentes/` — infra de agentes (hooks, barramento).
 - `.claude/`, `.agents/`, `.codex/` — config operacional dos agentes.

@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-18 max-w-[90rem] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-[90rem] items-center justify-between px-4 sm:h-24 sm:px-6 lg:px-8">
         <Logo priority />
 
         <nav className="hidden items-center gap-8 lg:flex">

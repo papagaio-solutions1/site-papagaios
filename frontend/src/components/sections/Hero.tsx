@@ -39,8 +39,9 @@ export function Hero() {
         aria-hidden
         fill
         priority
+        quality={100}
         sizes="100vw"
-        className="pointer-events-none absolute inset-0 -z-10 object-cover object-center opacity-55 select-none"
+        className="pointer-events-none absolute inset-0 -z-10 object-cover object-center opacity-70 select-none"
       />
       {/* Véu branco por cima da foto — brilho central forte garante a leitura do texto */}
       <div
@@ -48,7 +49,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(58rem 36rem at 50% 44%, rgba(255,255,255,0.92), rgba(255,255,255,0.55) 52%, transparent 82%), linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.7) 100%)",
+            "radial-gradient(58rem 36rem at 50% 44%, rgba(255,255,255,0.82), rgba(255,255,255,0.4) 55%, transparent 88%), linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.58) 100%)",
         }}
       />
       {/* Brilho solar quente no topo */}

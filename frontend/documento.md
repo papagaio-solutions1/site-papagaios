@@ -1,4 +1,4 @@
-# app - Frontend (React / Next.js)
+# frontend — Frontend (React / Next.js)
 
 Aplicacao **Next.js** (React 19 + Tailwind 4 + shadcn/ui + motion) do site Papagaios Solutions IA (Etapa 2).
 
@@ -8,5 +8,5 @@ informacoes comerciais da Midia 5D pelas da **Papagaios Solutions IA** (ver mock
 
 - Etapa 2: navegavel SEM backend, com **dados locais de demonstracao** identificados no codigo (nada
   simulado apresentado como integrado). Mantem o **bot Guto** (interface).
-- Etapa 3: integra backend (`../server/`) e Supabase.
+- Etapa 3: integra backend (`../backend/`) e Supabase.
 - Os **cases** do dono sao preservados para a etapa de integracao.

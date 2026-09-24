@@ -21,13 +21,14 @@ export function Logo({
       <Image
         src="/brand/symbol.png"
         alt=""
-        width={44}
-        height={44}
+        width={128}
+        height={128}
+        quality={100}
         priority={priority}
-        className="h-10 w-10 shrink-0"
+        className="h-12 w-12 shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/10 sm:h-14 sm:w-14"
       />
       <span className="flex flex-col leading-none">
-        <span className="text-lg font-bold tracking-tight sm:text-xl">
+        <span className="text-xl font-bold tracking-tight sm:text-2xl">
           <span className={dark ? "text-white" : "text-foreground"}>Papagaios</span>{" "}
           <span className="text-primary">Solutions</span>
         </span>
