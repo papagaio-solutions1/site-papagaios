@@ -6,11 +6,14 @@
 *.key
 secrets/
 
-# === Node / Vite (app/) ===
+# === Node / Next.js (app/) ===
 node_modules/
 dist/
 build/
 .vite/
+.next/
+.turbo/
+*.tsbuildinfo
 *.local
 npm-debug.log*
 yarn-debug.log*

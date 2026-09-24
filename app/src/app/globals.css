@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Papagaios Solutions IA — identidade dourada sobre claro, com seções escuras
+  quase-pretas (fundo do logo: papagaio dourado sobre preto). Dourado protagonista,
+  âmbar/bronze como destaque. Tokens compatíveis com shadcn/ui (Tailwind v4).
+*/
+:root {
+  --radius: 0.75rem; /* 12px — cantos arredondados */
+
+  --background: #ffffff;
+  --foreground: #0b0f19; /* quase preto — texto principal */
+
+  --card: #ffffff;
+  --card-foreground: #0b0f19;
+
+  --popover: #ffffff;
+  --popover-foreground: #0b0f19;
+
+  --primary: #c7890a; /* dourado principal — cor dominante */
+  --primary-foreground: #1b1400; /* quase preto — contraste sobre o dourado */
+
+  --secondary: #fbf2d7; /* tinta dourada bem clara (chips/superfícies) */
+  --secondary-foreground: #0b0f19;
+
+  --muted: #f5f6f8;
+  --muted-foreground: #5a6473;
+
+  --accent: #fbf2d7; /* superfície de hover */
+  --accent-foreground: #0b0f19;
+
+  --highlight: #9a5b00; /* âmbar/bronze de destaque */
+  --highlight-foreground: #ffffff;
+
+  --destructive: #e53935;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(11, 15, 25, 0.1);
+  --input: rgba(11, 15, 25, 0.14);
+  --ring: #c7890a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Preto de marca (footer / seções de contraste) — fundo do logo Papagaios */
+  --color-brand-dark: #0b0b0d;
+
+  --font-sans: var(--font-poppins);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}

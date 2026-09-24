@@ -87,7 +87,11 @@ SECRET_PATTERNS = [
      "JWT (provavel token/anon/service_role)"),
     (re.compile(r"(?:postgresql|mysql)(?:\+\w+)?://[^:@/\s]+:[^@/\s]+@"),
      "string de conexao de banco com senha"),
-    (re.compile(r"(?i)\b(password|senha|secret|token|api[_-]?key|apikey)\b\s*[:=]\s*['\"]?\S{6,}"),
+    # Só dispara quando o valor atribuido parece um SEGREDO de verdade (literal entre
+    # aspas, YAML/env, token cru). Ignora leitura de codigo — process.env.X, String(...),
+    # Number(...), await, ou qualquer chamada/propriedade `ident.` / `ident(` — que gerava
+    # falso positivo em `const password = String(fd.get(...))` e `token = process.env.X`.
+    (re.compile(r"(?i)\b(password|senha|secret|token|api[_-]?key|apikey)\b\s*[:=]\s*(?!process\.|String\(|Number\(|Boolean\(|await\b|[A-Za-z_$][\w$]*\s*[.(])['\"]?\S{6,}"),
      "credencial atribuida (senha/token)"),
     (re.compile(r"\b\d{3}\.\d{3}\.\d{3}-\d{2}\b"), "CPF"),
 ]
