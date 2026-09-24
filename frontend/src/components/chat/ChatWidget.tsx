@@ -308,9 +308,6 @@ export function ChatWidget() {
 
       {/* ---------- Botão flutuante (FAB) ---------- */}
       <div className="relative flex justify-end">
-        {!open && !reduce && (
-          <span className="pointer-events-none absolute inset-0 -z-10 animate-ping rounded-full bg-primary/30" />
-        )}
         <motion.button
           onClick={() => (open ? setOpen(false) : openChat())}
           aria-label={open ? "Fechar chat do Guto" : "Abrir chat do Guto"}
