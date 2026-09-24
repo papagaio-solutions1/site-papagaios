@@ -26,6 +26,17 @@ venv/
 .mypy_cache/
 .ruff_cache/
 
+# === Agentes / skills (junctions, nao versionar - restaurar via scripts/restaurar-skills.ps1) ===
+.claude/skills/
+.agents/skills/
+
+# === Barramento (local, por maquina) ===
+Conversa_Agentes/.bus-cursor-*
+Conversa_Agentes/BARRAMENTO.jsonl.lock
+Conversa_Agentes/telemetria-barramento-*.json
+Conversa_Agentes/PAINEL-BARRAMENTO-*.txt
+Conversa_Agentes/arquivo/
+
 # === Sistema / editor ===
 .DS_Store
 Thumbs.db

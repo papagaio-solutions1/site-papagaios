@@ -7,10 +7,16 @@ base_arquitetural: Processo-Padrao
 status: fundacao
 versao: 0.1.0
 
-# Estrutura de codigo (fora do arquetipo de docs 00-12)
+# Estrutura
 codigo:
   frontend: app/        # React/Vite (Etapa 2) - referencia: site_midia5d
   backend: server/      # IA de conversacao / bot Guto + Supabase (Etapa 3)
+docs: docs/             # arquetipo ProjetoProduto (00_..12_, specs)
+infra_agentes:
+  hooks: Hooks/         # harness de hooks (anti-segredo + nudges)
+  scripts: scripts/     # bus.ps1 (barramento), restaurar-skills.ps1
+  barramento: Conversa_Agentes/
+  config: [.claude/, .agents/, .codex/]   # skills via junction (nao versionadas)
 
 # Repositorios (ver github.md) - push sempre nos dois
 repositorios:

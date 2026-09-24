@@ -7,16 +7,23 @@ Site institucional da **Papagaios Solutions** — frontend em **React** e backen
 Base arquitetural: convenções do **Processo-Padrão** (fonte única do padrão), arquétipo **ProjetoProduto** (versão enxuta, só o que se aplica a um site).
 O motor do `PAPAGAIO-NUCLEO` foi descartado nesta fundação (scaffolder quebrado no layout atual e nenhuma família serve a um site institucional — ver `08_Estudos/` e `documento.md`).
 
-### Código
+### Raiz
 | Pasta | O quê |
 |---|---|
 | `app/` | Frontend **React/Vite** (Etapa 2). Referência visual/estrutural: `site_midia5d`. Identidade 100% Papagaios Solutions. Mantém o bot Guto. |
 | `server/` | Backend (Etapa 3): **IA de conversação / bot Guto** (LLM), regras de negócio, APIs e integração **Supabase**. |
+| `docs/` | Documentação do arquétipo **ProjetoProduto** (`00_..12_`, `specs/`). |
+| `Hooks/`, `scripts/`, `Conversa_Agentes/` | Infra de agentes: hooks, barramento. |
+| `.claude/`, `.agents/`, `.codex/` | Config operacional dos agentes (Claude/Codex). |
 
-### Governança / documentação (arquétipo)
-`00_Indice_Mestre` · `00_Specs_SDD` · `01_Negocio` · `02_Arquitetura` · `03_Integracoes` · `04_Banco_de_Dados` · `05_Seguranca` · `06_Operacao` · `07_Configuracoes` · `08_Estudos` · `09_Qualidade` · `12_API_Contratos` · `specs` · `_Conversas_Agentes`
+### Documentação (`docs/`)
+`00_Indice_Mestre` · `00_Specs_SDD` · `01_Negocio` · `02_Arquitetura` · `03_Integracoes` · `04_Banco_de_Dados` · `05_Seguranca` · `06_Operacao` · `07_Configuracoes` · `08_Estudos` · `09_Qualidade` · `12_API_Contratos` · `specs`
 
 Cada pasta tem um `documento.md` explicando o que vai nela. Índice navegável completo: [`documento.md`](./documento.md).
+
+### Agentes / IA
+- `CLAUDE.md` / `AGENTS.md` — adaptadores de governança do projeto.
+- Skills não versionadas (junctions para o `skill-library` do Processo-Padrão); restaurar com `pwsh scripts/restaurar-skills.ps1`.
 
 ## Repositórios (ver `github.md`)
 - Pessoal: https://github.com/josefarias3108/site-papagaios (privado)

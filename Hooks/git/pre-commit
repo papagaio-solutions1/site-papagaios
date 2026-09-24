@@ -1,0 +1,22 @@
+#!/bin/sh
+# Hook pre-commit — núcleo Processo Padrão (defesa-em-profundidade).
+# Roda o anti-segredo no nível git (além do PreToolUse do Claude), varrendo o stage.
+# Ative uma vez por clone:  git config core.hooksPath Hooks/git
+#
+# Falha aberta: se o Python nao estiver no PATH, NAO bloqueia (apenas avisa) — a disciplina vem primeiro.
+
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+CHECK="$ROOT/Hooks/check_secrets.py"
+[ -f "$CHECK" ] || exit 0
+
+if command -v python >/dev/null 2>&1; then
+  PY=python
+elif command -v python3 >/dev/null 2>&1; then
+  PY=python3
+else
+  echo "pre-commit: python ausente — anti-segredo nao rodou (seguindo sem bloquear)."
+  exit 0
+fi
+
+"$PY" "$CHECK" precommit
+exit $?

@@ -1,0 +1,25 @@
+# Configuracao do Codex para o projeto site-papagaios (Papagaios Solutions).
+# Escopo deste projeto apenas. Ver AGENTS.md e CLAUDE.md para as regras.
+
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[agents.mecanico]
+description = "Busca, inventario, classificacao e validacao mecanica de baixo risco."
+config_file = "agents/mecanico.toml"
+
+[agents.padrao]
+description = "Implementacao e documentacao comuns com escopo claro."
+config_file = "agents/padrao.toml"
+
+[agents.critico]
+description = "Arquitetura, seguranca, migracao, diagnostico dificil ou decisao de alto impacto."
+config_file = "agents/critico.toml"
+
+[agents.revisor]
+description = "Revisao independente e somente leitura de resultado critico."
+config_file = "agents/revisor.toml"
