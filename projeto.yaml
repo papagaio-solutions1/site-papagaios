@@ -1,0 +1,26 @@
+id: site-papagaios
+nome: Site Papagaios Solutions
+organizacao: Papagaios Solutions
+tipo: produto
+arquetipo: ProjetoProduto (enxuto)
+base_arquitetural: Processo-Padrao
+status: fundacao
+versao: 0.1.0
+
+# Estrutura de codigo (fora do arquetipo de docs 00-12)
+codigo:
+  frontend: app/        # React/Vite (Etapa 2) - referencia: site_midia5d
+  backend: server/      # IA de conversacao / bot Guto + Supabase (Etapa 3)
+
+# Repositorios (ver github.md) - push sempre nos dois
+repositorios:
+  pessoal: https://github.com/josefarias3108/site-papagaios
+  organizacao: https://github.com/papagaio-solutions1/site-papagaios
+branch_trabalho: site-papagaios-solutions
+
+# Notas de arquitetura
+notas:
+  - Motor do PAPAGAIO-NUCLEO descartado nesta fundacao (scaffolder quebrado no layout atual + nenhuma familia serve a site institucional).
+  - Base adotada: convencoes do Processo-Padrao (referenciar-nao-copiar, documento.md por pasta, segredo fora do Git, hooks em Hooks/).
+  - Cases do dono sao preservados para a etapa de integracao.
+  - Segredos apenas via .env (nunca versionar).
