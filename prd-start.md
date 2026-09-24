@@ -1,16 +1,36 @@
 Você será responsável por criar o site da **Papagaios Solutions**. Execute o trabalho em etapas, concluindo e testando cada uma antes de avançar para a próxima. Não faça o deploy até eu avisar.
 
-## Etapa 1 — Arquitetura e repositórios
+## Etapa 1 — Arquitetura e repositórios  ✅ CONCLUÍDA (2026-09-24)
 
-Examine o projeto `PAPAGAIO-NUCLEO` antes de criar ou mover arquivos. Estude a arquitetura modular completa: regras, organização das pastas, agentes, skills, arquivos de orientação para LLMs, templates, scripts e demais componentes aplicáveis ao novo projeto.
+> **Decisão de arquitetura (ver `docs/08_Estudos/analise-fundacao-etapa1.md`):** o motor do
+> `PAPAGAIO-NUCLEO` (`motor-criar-projetos`) foi **descartado** nesta fundação porque (1) o scaffolder
+> está quebrado no layout atual do núcleo — o smoke test oficial `testar-motor-projetos.ps1` falha, pois
+> os scripts apontam para pastas de raiz que foram movidas para `.padrao-papagaio/` e `.llm/`, e
+> `Familias/` não existe — e (2) nenhuma das 4 famílias (`painel-clinicas`, `bot-llm`,
+> `bot-deterministico`, `plataforma-papagaio`) serve a um site institucional.
+>
+> **Base adotada:** convenções do projeto **`Processo-Padrao`** (referenciar-não-copiar, `documento.md`
+> por pasta, segredo fora do Git), com o arquétipo **`ProjetoProduto`** (versão enxuta) + casas de
+> código próprias.
 
-Examine especialmente o motor de criação em:
+Estrutura do projeto (raiz limpa):
 
-`C:\Users\Cliente\OneDrive\Área de Trabalho\Antigravity\PAPAGAIO-NUCLEO\motor-criar-projetos`
+- `app/` — frontend **React/Vite** (Etapa 2), referência `site_midia5d`.
+- `server/` — backend de **IA de conversação / bot Guto** (LLM) + Supabase (Etapa 3).
+- `docs/` — documentação do arquétipo ProjetoProduto (`00_..12_`, `specs/`), um `documento.md` por pasta.
+- Infra de agentes: `Hooks/` (anti-segredo + nudges), `scripts/` (barramento `bus.ps1`,
+  `restaurar-skills.ps1`), `Conversa_Agentes/` (barramento local isolado), `.claude/` `.agents/` `.codex/`
+  (config + skills por **junction**, não versionadas). Adaptadores `CLAUDE.md` / `AGENTS.md`.
+- Skills ativas (junction para o `skill-library` do Processo-Padrão): `especialista-react`,
+  `especialista-front-end`, `ux-ui-design`, `especialista-banco-dados`, `especialista-aws`,
+  `especialista-qa` + núcleo (`escritor-tecnico`, `engenheiro-de-prompt`, `orquestrador-claude-code`,
+  `curador-de-conhecimento`, `monitor-contexto-tokens`, `fechar-spec`).
 
-Organize o site segundo as convenções reais do núcleo. Use o motor, caso seja o fluxo previsto pela arquitetura, e configure os componentes necessários ao site. Não copie pastas indiscriminadamente: respeite os limites entre o núcleo reutilizável e o projeto criado. Use os agentes e skills da arquitetura nas tarefas em que forem aplicáveis.
+Repositórios (`github.md`) — **branch `site-papagaios-solutions` criada e enviada nos dois**:
 
-Leia `github.md`, identifique corretamente os repositórios e remotos pessoal e da organização e crie a branch `site-papagaios-solutions` nos dois, conforme as instruções do arquivo. Se `github.md` exigir outro padrão de nome, aplique esse padrão e informe o nome utilizado. Confirme em quais repositórios a branch foi criada.
+- Pessoal: `github.com/josefarias3108/site-papagaios` (privado) — remoto `origin`.
+- Organização: `github.com/papagaio-solutions1/site-papagaios` (público) — remoto `org`.
+- Regra: todo `push` vai **nos dois** remotos. Segredo nunca no Git (`.env` ignorado + hook anti-segredo).
 
 ## Etapa 2 — Frontend React, com teste local
 
